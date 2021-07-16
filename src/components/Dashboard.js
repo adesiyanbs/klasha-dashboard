@@ -220,7 +220,7 @@ function Dashboard() {
                 <img src={Calendar} alt="" />
               </Box>
             </Flex>
-            <Box w="50%">
+            <Box w="65%">
               <Button
               float='right'
                 px="25px"
@@ -241,9 +241,9 @@ function Dashboard() {
           
           <Thead >
             <Tr bg='#E5E5E5'>
-              <Th fontSize={["10px","10px","14px"]} fontWeight='700' color='#2A2A2A'>Payout ID</Th>
-              <Th fontSize={["10px","10px","14px"]} fontWeight='700' color='#2A2A2A'>Source</Th>
-              <Th fontSize={["10px","10px","14px"]} fontWeight='700' color='#2A2A2A'>Date</Th>
+              <Th fontSize={["14px","10px","14px"]} fontWeight='700' color='#2A2A2A'>Payout ID</Th>
+              <Th fontSize={["14px","10px","14px"]} fontWeight='700' color='#2A2A2A'>Source</Th>
+              <Th fontSize={["14px","10px","14px"]} fontWeight='700' color='#2A2A2A'>Date</Th>
               <Th fontSize={["10px","10px","14px"]} fontWeight='700' color='#2A2A2A'>Amount</Th>
             </Tr>
           </Thead>
@@ -278,38 +278,38 @@ function Dashboard() {
           </Tbody>
           
         </Table>
-        <Table w='100%' display={["block","block","none","none"]} size={["sm","sm","30%","lg"]} mt='20px' className='table' variant="simple" >
+        <Table w='100%' display={["block","none","none"]} size={["5%","5%",""]} mt='20px' className='table' variant="simple" >
           
           <Thead >
             <Tr bg='#E5E5E5'>
-              <Th fontSize={["10px","10px","14px"]} fontWeight='700' color='#2A2A2A'>Payout ID</Th>
-              <Th fontSize={["10px","10px","14px"]} fontWeight='700' color='#2A2A2A'>Source</Th>
-              <Th fontSize={["10px","10px","14px"]} fontWeight='700' color='#2A2A2A'>Date</Th>
-              <Th fontSize={["10px","10px","14px"]} fontWeight='700' color='#2A2A2A'>Amount</Th>
+              <Th fontSize={["12px","10px","14px"]} fontWeight='700' color='#2A2A2A'>Payout ID</Th>
+              <Th fontSize={["12px","10px","14px"]} fontWeight='700' color='#2A2A2A'>Source</Th>
+              <Th fontSize={["12px","10px","14px"]} fontWeight='700' color='#2A2A2A'>Date</Th>
+              <Th fontSize={["12px","10px","14px"]} fontWeight='700' color='#2A2A2A'>Amount</Th>
             </Tr>
           </Thead>
           <Tbody >
-            <Tr fontSize={["10px","10px","14px"]}  className='tableHover'>
+            <Tr fontSize={["12px","10px","14px"]}  className='tableHover'>
               <Td>KLA12579DHQ</Td>
               <Td>Vel pellentesque ornare</Td>
               <Td>25th November, 2020</Td>
               <Td>$1,200</Td>
             </Tr>
            
-           <Tr fontSize={["10px","10px","14px"]}  className='tableHover'>
+           <Tr fontSize={["12px","10px","14px"]}  className='tableHover'>
             <Td>KLA12579DHQ</Td>
               <Td>Vel pellentesque ornare</Td>
               <Td>25th November, 2020</Td>
               <Td>$1,200</Td>
             </Tr>
            
-            <Tr fontSize={["10px","10px","14px"]} className='tableHover'>
+            <Tr fontSize={["12px","10px","14px"]} className='tableHover'>
               <Td>KLA12579DHQ</Td>
               <Td>Vel pellentesque ornare</Td>
               <Td>25th November, 2020</Td>
               <Td>$1,200</Td>
             </Tr>
-            <Tr fontSize={["10px","10px","14px"]} className='tableHover'>
+            <Tr fontSize={["12px","10px","14px"]} className='tableHover'>
               <Td>KLA12579DHQ</Td>
               <Td>Vel pellentesque ornare</Td>
               <Td>25th November, 2020</Td>
