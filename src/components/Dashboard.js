@@ -36,7 +36,7 @@ import '../styles/dash.css'
 function Dashboard() {
   return (
     <Flex mb='5px'>
-      <Box display={["none","none","block"]} h="auto" pt="40px" bg="gray.100" w="25%">
+      <Box display={["none","none","block"]} h="auto" pt="40px" bg="#e5e5e5" w="25%">
         <Box pl="40px">
           <img src={logo} alt="" />
         </Box>
