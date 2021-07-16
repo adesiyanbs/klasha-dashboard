@@ -1,0 +1,14 @@
+.hover:hover{
+    background-color: #f5f5f5;
+    color: black;
+    font-weight: 600;
+}
+.tableHover{
+    margin-top: 20px;
+}
+.tableHover:hover{
+    border: 1px solid #2C665D;
+    background-color: white;
+    box-shadow: 3px 3px 13px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
