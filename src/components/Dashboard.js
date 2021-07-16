@@ -35,8 +35,8 @@ import '../styles/dash.css'
 
 function Dashboard() {
   return (
-    <Flex>
-      <Box display={["none","none","block"]} h="110vh" pt="40px" bg="gray.100" w="25%">
+    <Flex mb='5px'>
+      <Box display={["none","none","block"]} h="auto" pt="40px" bg="gray.100" w="25%">
         <Box pl="40px">
           <img src={logo} alt="" />
         </Box>
@@ -141,7 +141,7 @@ function Dashboard() {
           </Flex>
         </Flex>
         <Flex
-          w={["100%","100%","65%"]}
+          w={["100%","100%","100%","65%"]}
           
           direction={["column","column","row"]}
           h="auto"
@@ -195,25 +195,25 @@ function Dashboard() {
               Payout table
             </Text>
           </Box>
-          <Flex direction={["column","column","row"]} mt={["10px","10px",""]} >
+          <Flex direction={["column","column","row"]} mt={["10px","10px","0"]} >
             <InputGroup w="100%" mr="15px">
               <Input fontSize="14px" placeholder="Search something...." />
               <InputRightElement>
                 <Button variantColor='none' variant='outline' border='none'><img src={Search} alt="" /></Button>
               </InputRightElement>
             </InputGroup>
-            <Flex  mt={["10px","10px",""]}>
+            <Flex w='100%' mt={["10px","10px","0"]}>
             <Flex
               mr="25px"
-              w="45%"
-              pl="12px"
+              w={["35%","45%","55%"]}
+              pl="10px"
               py="10px"
               pr="13px"
               border="1px"
               borderColor="#E5E5E5"
               borderRadius='sm'
             >
-              <Text mr="5px" fontSize="12px" fontWeight="400" color="#2A2A2A">
+              <Text mr="5px" fontSize="10px" fontWeight="400" color="#2A2A2A">
                 March 2020
               </Text>
               <Box>
@@ -222,6 +222,7 @@ function Dashboard() {
             </Flex>
             <Box w="50%">
               <Button
+              float='right'
                 px="25px"
                 borderRadius="sm"
                 bg="#3D8F83"
@@ -236,7 +237,48 @@ function Dashboard() {
             </Flex>
           </Flex>
         </Flex>
-        <Table size='5%' mt='20px' variant="simple" >
+        <Table  display={["none","none","table","table"]} mt='20px' className='table' variant="simple" >
+          
+          <Thead >
+            <Tr bg='#E5E5E5'>
+              <Th fontSize={["10px","10px","14px"]} fontWeight='700' color='#2A2A2A'>Payout ID</Th>
+              <Th fontSize={["10px","10px","14px"]} fontWeight='700' color='#2A2A2A'>Source</Th>
+              <Th fontSize={["10px","10px","14px"]} fontWeight='700' color='#2A2A2A'>Date</Th>
+              <Th fontSize={["10px","10px","14px"]} fontWeight='700' color='#2A2A2A'>Amount</Th>
+            </Tr>
+          </Thead>
+          <Tbody >
+            <Tr fontSize={["10px","10px","14px"]}  className='tableHover'>
+              <Td>KLA12579DHQ</Td>
+              <Td>Vel pellentesque ornare</Td>
+              <Td>25th November, 2020</Td>
+              <Td>$1,200</Td>
+            </Tr>
+           
+           <Tr fontSize={["10px","10px","14px"]}  className='tableHover'>
+            <Td>KLA12579DHQ</Td>
+              <Td>Vel pellentesque ornare</Td>
+              <Td>25th November, 2020</Td>
+              <Td>$1,200</Td>
+            </Tr>
+           
+            <Tr fontSize={["10px","10px","14px"]} className='tableHover'>
+              <Td>KLA12579DHQ</Td>
+              <Td>Vel pellentesque ornare</Td>
+              <Td>25th November, 2020</Td>
+              <Td>$1,200</Td>
+            </Tr>
+            <Tr fontSize={["10px","10px","14px"]} className='tableHover'>
+              <Td>KLA12579DHQ</Td>
+              <Td>Vel pellentesque ornare</Td>
+              <Td>25th November, 2020</Td>
+              <Td>$1,200</Td>
+            </Tr>
+            
+          </Tbody>
+          
+        </Table>
+        <Table w='100%' display={["block","block","none","none"]} size={["sm","sm","30%","lg"]} mt='20px' className='table' variant="simple" >
           
           <Thead >
             <Tr bg='#E5E5E5'>
