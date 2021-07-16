@@ -36,7 +36,7 @@ import '../styles/dash.css'
 function Dashboard() {
   return (
     <Flex>
-      <Box h="110vh" pt="40px" bg="gray.100" w="25%">
+      <Box display={["none","none","block"]} h="110vh" pt="40px" bg="gray.100" w="25%">
         <Box pl="40px">
           <img src={logo} alt="" />
         </Box>
@@ -121,7 +121,7 @@ function Dashboard() {
         </Box>
 
       </Box>
-      <Box w="75%" px="40px" pt="30px">
+      <Box w={["100%","100%","75%"]} px={["10px","10px","40px"]} pt="30px">
         <Flex justify="space-between" w="100%">
           <Box>
             <Text fontSize="18px" fontWeight="700" color="#2A2A2A">
@@ -141,14 +141,16 @@ function Dashboard() {
           </Flex>
         </Flex>
         <Flex
-          w="65%"
-          h="170px"
+          w={["100%","100%","65%"]}
+          
+          direction={["column","column","row"]}
+          h="auto"
           border="1px"
           borderColor="#EBEBEB"
           borderRadius="md"
           mt="63px"
         >
-          <Box pb="25px" pt="25px" px="20px" w="50%">
+          <Box pb="25px" pt="25px" px="20px" w={["100%","100%","50%"]}>
             <Flex justify="space-between">
               <Text fontSize="14px" color="#2C665D">
                 Total account balance
@@ -180,26 +182,27 @@ function Dashboard() {
               </Text>
             </Box>
           </Box>
-          <Box bg="#F5F5F5" w="50%" pl="20px" pt="25px">
+          <Box bg="#F5F5F5" w={["100%","100%","50%"]} pl="20px" pt="25px">
             <Text>Funds on hold</Text>
             <Text mt="35px" fontSize="36px" fontWeight="700">
               $5,332.18
             </Text>
           </Box>
         </Flex>
-        <Flex mt="40px" justify="space-between">
+        <Flex  direction={["column","column","row"]} mt={["20px","20px","40px"]} justify="space-between">
           <Box>
             <Text fontSize="18px" fontWeight="700">
               Payout table
             </Text>
           </Box>
-          <Flex>
+          <Flex direction={["column","column","row"]} mt={["10px","10px",""]} >
             <InputGroup w="100%" mr="15px">
               <Input fontSize="14px" placeholder="Search something...." />
               <InputRightElement>
                 <Button variantColor='none' variant='outline' border='none'><img src={Search} alt="" /></Button>
               </InputRightElement>
             </InputGroup>
+            <Flex  mt={["10px","10px",""]}>
             <Flex
               mr="25px"
               w="45%"
@@ -230,40 +233,41 @@ function Dashboard() {
                 Payout
               </Button>
             </Box>
+            </Flex>
           </Flex>
         </Flex>
-        <Table mt='20px' variant="simple" >
+        <Table size='5%' mt='20px' variant="simple" >
           
           <Thead >
             <Tr bg='#E5E5E5'>
-              <Th fontSize='14px' fontWeight='700' color='#2A2A2A'>Payout ID</Th>
-              <Th fontSize='14px' fontWeight='700' color='#2A2A2A'>Source</Th>
-              <Th fontSize='14px' fontWeight='700' color='#2A2A2A'>Date</Th>
-              <Th fontSize='14px' fontWeight='700' color='#2A2A2A'>Amount</Th>
+              <Th fontSize={["10px","10px","14px"]} fontWeight='700' color='#2A2A2A'>Payout ID</Th>
+              <Th fontSize={["10px","10px","14px"]} fontWeight='700' color='#2A2A2A'>Source</Th>
+              <Th fontSize={["10px","10px","14px"]} fontWeight='700' color='#2A2A2A'>Date</Th>
+              <Th fontSize={["10px","10px","14px"]} fontWeight='700' color='#2A2A2A'>Amount</Th>
             </Tr>
           </Thead>
           <Tbody >
-            <Tr  className='tableHover'>
+            <Tr fontSize={["10px","10px","14px"]}  className='tableHover'>
               <Td>KLA12579DHQ</Td>
               <Td>Vel pellentesque ornare</Td>
               <Td>25th November, 2020</Td>
               <Td>$1,200</Td>
             </Tr>
            
-           <Tr  className='tableHover'>
+           <Tr fontSize={["10px","10px","14px"]}  className='tableHover'>
             <Td>KLA12579DHQ</Td>
               <Td>Vel pellentesque ornare</Td>
               <Td>25th November, 2020</Td>
               <Td>$1,200</Td>
             </Tr>
            
-            <Tr className='tableHover'>
+            <Tr fontSize={["10px","10px","14px"]} className='tableHover'>
               <Td>KLA12579DHQ</Td>
               <Td>Vel pellentesque ornare</Td>
               <Td>25th November, 2020</Td>
               <Td>$1,200</Td>
             </Tr>
-            <Tr className='tableHover'>
+            <Tr fontSize={["10px","10px","14px"]} className='tableHover'>
               <Td>KLA12579DHQ</Td>
               <Td>Vel pellentesque ornare</Td>
               <Td>25th November, 2020</Td>
@@ -277,7 +281,7 @@ function Dashboard() {
 
       </Box>
     </Flex>
-  );//dj
+  );
 }
 
 export default Dashboard;
