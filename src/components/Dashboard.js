@@ -285,7 +285,7 @@ function Dashboard() {
                 w="30%"
                 h="25px"
               >
-                <option value="option1">USD</option>
+                <option value="option1">meeeee</option>
                 <Divider />
                 <option value="option2">KES</option>
                 <Divider />
