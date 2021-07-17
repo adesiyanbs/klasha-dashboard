@@ -19,7 +19,7 @@ import {
   
   
 } from "@chakra-ui/react";
-import { VscClose } from "react-icon-library";
+// import { VscClose } from "react-icon-library";
 import logo from "../assets/logo.svg";
 import dash from "../assets/dash.svg";
 import notification from "../assets/notification.svg";
@@ -253,7 +253,7 @@ function Dashboard() {
           ml={3}
           display={["block","block","none"]}
           onClick={() => changeNav('block')} 
-          icon={<VscClose/>}
+          
         />
           </Flex>
         </Flex>
