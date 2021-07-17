@@ -253,7 +253,7 @@ function Dashboard() {
           size="md"
           mt='3px'
           ml={3}
-          display={["block","block","none"]}
+          display={["block","block","block"]}
           onClick={() => changeNav('block')} 
           icon={<HamburgerIcon/>}
         />
