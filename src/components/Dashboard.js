@@ -19,6 +19,7 @@ import {
   
   
 } from "@chakra-ui/react";
+import {HamburgerIcon,CloseIcon} from '@chakra-ui/icons'
 // import { VscClose } from "react-icon-library";
 import logo from "../assets/logo.svg";
 import dash from "../assets/dash.svg";
@@ -136,8 +137,8 @@ function Dashboard() {
             mt={2}
             mr={2}
             aria-label="Open Menu"
-            size="lg"
-            icon={settings}
+            size="md"
+            icon={<CloseIcon/>}
             onClick={() => changeNav('none')} 
           />
         </Flex>
@@ -249,11 +250,12 @@ function Dashboard() {
             </Box>
             <IconButton
           aria-label="Open Menu"
-          size="lg"
+          size="md"
+          mt='3px'
           ml={3}
           display={["block","block","none"]}
           onClick={() => changeNav('block')} 
-          
+          icon={<HamburgerIcon/>}
         />
           </Flex>
         </Flex>
