@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useState} from "react";
 import {
   Box,
   Flex,
@@ -12,12 +12,14 @@ import {
   Table,
   Thead,
   Tbody,
-  
+  IconButton,
   Tr,
   Th,
   Td,
   
+  
 } from "@chakra-ui/react";
+import { VscClose } from "react-icon-library";
 import logo from "../assets/logo.svg";
 import dash from "../assets/dash.svg";
 import notification from "../assets/notification.svg";
@@ -33,10 +35,14 @@ import contact from "../assets/Call.svg";
 import logout from "../assets/Logout.svg";
 import '../styles/dash.css'
 
+import Nav from "./Nav";
+
 function Dashboard() {
+  const [nav, changeNav] = useState('none')
   return (
-    <Flex mb='5px'>
-      <Box display={["none","none","block"]} h="auto" pt="40px" bg="#e5e5e5" w="25%">
+    <Flex direction={["column","column","row"]} mb='5px'>
+       <Box h="auto" pt={['0','0',"40px"]} bg={['none','none',"#e5e5e5"]} w={["100%","100%","25%"]}  >
+        <Box display={["none","none","block"]} >
         <Box pl="40px">
           <img src={logo} alt="" />
         </Box>
@@ -119,8 +125,110 @@ function Dashboard() {
             </Flex>
           </Box>
         </Box>
+        </Box>
 
-      </Box>
+        {/* secondnav */}
+        <Box zIndex='2' position='absolute'  top="0" left="0" overflow='auto' display={nav} h="auto" pt="40px" bg="#e5e5e5" w="100%">
+        <Box>
+        <Flex pl="40px" w='100%' justify='space-between'>
+          <img src={logo} alt="" />
+          <IconButton
+            mt={2}
+            mr={2}
+            aria-label="Open Menu"
+            size="lg"
+            icon={settings}
+            onClick={() => changeNav('none')} 
+          />
+        </Flex>
+        <Box mt="50px">
+          <Box pl="40px">
+            <Text fontSize="14px" fontWeight="600">
+              Main pages
+            </Text>
+          </Box>
+          <Box pl="40px" mt="13px" py="15px"  bg="white" w="99%">
+            <Flex w="50%">
+              <Box mr='10px' mt='2px'>
+                <img src={dash} alt="" />
+              </Box>
+              <Text fontSize="14px">Dashboard</Text>
+            </Flex>
+          </Box>
+          <Box className='hover' pl="40px" mt="13px" py="15px" color="#A6ABB2"  w="99%">
+            <Flex w="50%">
+              <Box mr='10px' mt='2px'>
+                <img src={balance} alt="" />
+              </Box>
+              <Text fontSize="14px">Balances</Text>
+            </Flex>
+          </Box>
+          <Box className='hover' pl="40px" mt="13px" py="15px"  color="#A6ABB2" w="99%">
+            <Flex w="50%">
+              <Box mr='10px' mt='2px'>
+                <img src={customers} alt="" />
+              </Box>
+              <Text fontSize="14px">Customers</Text>
+            </Flex>
+          </Box>
+          <Box className='hover' pl="40px" mt="13px" py="15px" color="#A6ABB2" w="99%">
+            <Flex w="50%">
+              <Box mr='10px' mt='2px'>
+                <img src={analytics} alt="" />
+              </Box>
+              <Text fontSize="14px">Analytics</Text>
+            </Flex>
+          </Box>
+        </Box>
+        <Box mt="45px">
+          <Box pl="40px">
+            <Text fontSize="14px" fontWeight="600">
+              General
+            </Text>
+          </Box>
+          <Box className='hover' pl="40px" mt="13px" py="15px" color="#A6ABB2"   w="99%">
+            <Flex w="50%">
+              <Box mr='10px' mt='2px'>
+                <img src={settings} alt="" />
+              </Box>
+              <Text fontSize="14px">Settings</Text>
+            </Flex>
+          </Box>
+          <Box className='hover' pl="40px" mt="13px" color="#A6ABB2" py="15px"  w="99%">
+            <Flex w="50%">
+              <Box mr='10px' mt='2px'>
+                <img src={star} alt="" />
+              </Box>
+              <Text fontSize="14px">Team</Text>
+            </Flex>
+          </Box>
+          <Box className='hover' mt="13px" py="15px" pl='40px' color="#A6ABB2" w="99%">
+            <Flex w="50%">
+              <Box mr='10px' mt='2px'>
+                <img src={contact} alt="" />
+              </Box>
+              <Text fontSize="14px">Contact</Text>
+            </Flex>
+          </Box>
+          <Box className='hover' mt="13px" py="15px" pl='40px'
+          color="#A6ABB2" w="99%">
+            <Flex w="50%">
+              <Box mr='10px' mt='2px'>
+                <img src={logout} alt="" />
+              </Box>
+              <Text fontSize="14px">Logout</Text>
+            </Flex>
+          </Box>
+        </Box>
+        </Box>
+
+    </Box>
+       
+
+
+    </Box>
+       
+   {/* //second nav */}
       <Box w={["100%","100%","75%"]} px={["10px","10px","40px"]} pt="30px">
         <Flex justify="space-between" w="100%">
           <Box>
@@ -132,12 +240,21 @@ function Dashboard() {
             </Text>
           </Box>
           <Flex>
+          
             <Box w="40%">
               <img w="100%" src={notification} alt="" />
             </Box>
             <Box w="40%" ml="10px">
               <img w="100%" src={Profile} alt="" />
             </Box>
+            <IconButton
+          aria-label="Open Menu"
+          size="lg"
+          ml={3}
+          display={["block","block","none"]}
+          onClick={() => changeNav('block')} 
+          icon={<VscClose/>}
+        />
           </Flex>
         </Flex>
         <Flex
