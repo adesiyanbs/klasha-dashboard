@@ -4,7 +4,7 @@ import {
   Flex,
   Divider,
   Text,
-  Select,
+  
   Input,
   InputGroup,
   InputRightElement,
@@ -20,6 +20,7 @@ import {
   
 } from "@chakra-ui/react";
 import {HamburgerIcon,CloseIcon} from '@chakra-ui/icons'
+import Select from 'react-select'
 // import { VscClose } from "react-icon-library";
 import logo from "../assets/logo.svg";
 import dash from "../assets/dash.svg";
@@ -40,6 +41,12 @@ import '../styles/dash.css'
 
 function Dashboard() {
   const [nav, changeNav] = useState('none')
+  const options =[
+    { value: 'USD', label: 'USD' },
+  { value: 'KES', label: 'KES' },
+  { value: 'NGN', label: 'NGN' },
+  { value: 'GHC', label: 'GHC' }
+  ]
   return (
     <Flex direction={["column","column","row"]} mb='5px'>
        <Box h="auto" pt={['0','0',"40px"]} bg={['none','none',"#e5e5e5"]} w={["100%","100%","25%"]}  >
@@ -271,27 +278,23 @@ function Dashboard() {
         >
           <Box pb="25px" pt="25px" px="20px" w={["100%","100%","50%"]}>
             <Flex justify="space-between">
-              <Text fontSize="14px" color="#2C665D">
+              <Text fontSize="12px" color="#2C665D">
                 Total account balance
               </Text>
               <Select
                 border="none"
                 bg="#F5F5F5"
                 fontSize="12px"
-                mt="-2px"
-                w="35%"
+                mt="-7px"
+                w="55%"
                 h="35px"
                 color='#2C665D'
-              >
-                <option value="option1">USD</option>
-                <Divider bg='#EBEBEB' />
-                <option value="option2">KES</option>
-                <Divider bg='#EBEBEB' />
-                <option value="option3">NGN</option>
-                <Divider bg='#EBEBEB' />
-                <option value="option3">GHC</option>
+                className='select'
+                options={options}
+              />
                 
-              </Select>
+                
+              
             </Flex>
             <Box mt="35px">
               <Text fontSize="36px" fontWeight="700">
