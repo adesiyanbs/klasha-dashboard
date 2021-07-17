@@ -2,29 +2,29 @@ import React from "react";
 import {
   Box,
   Flex,
-  Divider,
+  // Divider,
   Text,
-  Select,
-  Input,
-  InputGroup,
-  InputRightElement,
-  Button,
-  Table,
-  Thead,
-  Tbody,
+  // Select,
+  // Input,
+  // InputGroup,
+  // InputRightElement,
+  // Button,
+  // Table,
+  // Thead,
+  // Tbody,
   
-  Tr,
-  Th,
-  Td,
+  // Tr,
+  // Th,
+  // Td,
   
 } from "@chakra-ui/react";
 // import { useState } from 'react'
 import logo from "../assets/logo.svg";
 import dash from "../assets/dash.svg";
-import notification from "../assets/notification.svg";
-import Profile from "../assets/profile picture.svg";
-import Search from "../assets/Search.svg";
-import Calendar from "../assets/Calendar.svg";
+// import notification from "../assets/notification.svg";
+// import Profile from "../assets/profile picture.svg";
+// import Search from "../assets/Search.svg";
+// import Calendar from "../assets/Calendar.svg";
 import balance from "../assets/Wallet.svg";
 import customers from "../assets/3 User.svg";
 import analytics from "../assets/Activity.svg";

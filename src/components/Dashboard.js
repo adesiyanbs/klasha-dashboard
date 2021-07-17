@@ -36,7 +36,7 @@ import contact from "../assets/Call.svg";
 import logout from "../assets/Logout.svg";
 import '../styles/dash.css'
 
-import Nav from "./Nav";
+
 
 function Dashboard() {
   const [nav, changeNav] = useState('none')
@@ -248,13 +248,10 @@ function Dashboard() {
             <Box w="40%" ml="10px">
               <img w="100%" src={Profile} alt="" />
             </Box>
-            <Box
+            <IconButton
           aria-label="Open Menu"
           size="md"
           mt='3px'
-          w='200px'
-          h='30px'
-          bg='red.200'
           ml={3}
           display={["block","block","block"]}
           onClick={() => changeNav('block')} 
@@ -285,7 +282,7 @@ function Dashboard() {
                 w="30%"
                 h="25px"
               >
-                <option value="option1">meeeee</option>
+                <option value="option1">USD</option>
                 <Divider />
                 <option value="option2">KES</option>
                 <Divider />
