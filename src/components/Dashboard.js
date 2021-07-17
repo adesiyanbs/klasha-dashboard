@@ -248,10 +248,13 @@ function Dashboard() {
             <Box w="40%" ml="10px">
               <img w="100%" src={Profile} alt="" />
             </Box>
-            <IconButton
+            <Box
           aria-label="Open Menu"
           size="md"
           mt='3px'
+          w='200px'
+          h='30px'
+          bg='red.200'
           ml={3}
           display={["block","block","block"]}
           onClick={() => changeNav('block')} 
