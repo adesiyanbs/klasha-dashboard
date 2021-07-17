@@ -2,7 +2,7 @@ import {React, useState} from "react";
 import {
   Box,
   Flex,
-  Divider,
+  // Divider,
   Text,
   
   Input,
