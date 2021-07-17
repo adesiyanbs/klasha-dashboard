@@ -279,15 +279,16 @@ function Dashboard() {
                 bg="#F5F5F5"
                 fontSize="12px"
                 mt="-2px"
-                w="30%"
-                h="25px"
+                w="35%"
+                h="35px"
+                color='#2C665D'
               >
                 <option value="option1">USD</option>
-                <Divider />
+                <Divider bg='#EBEBEB' />
                 <option value="option2">KES</option>
-                <Divider />
+                <Divider bg='#EBEBEB' />
                 <option value="option3">NGN</option>
-                <Divider />
+                <Divider bg='#EBEBEB' />
                 <option value="option3">GHC</option>
                 
               </Select>
